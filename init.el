@@ -17,11 +17,27 @@
 ;; complete anything
 (global-company-mode t)
 
-;; theme
+;; config
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (global-linum-mode t)
 (setq inhibit-splash-screen t)
+(setq-default tab-width 4)
+(setq-default cursor-type 'bar)
+(setq make-backup-files nil)
+
+;; enable recentf-mode
+(require 'recentf)
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+
+;; hightlight in org file
+(require 'org)
+(setq org-src-fontify-natively t)
+
+;; delete selection mode
+(delete-selection-mode t)
 
 ;; package
 (custom-set-variables
