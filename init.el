@@ -66,6 +66,10 @@
 (require 'smartparens-config)
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
+;; org Agenda
+(setq org-agenda-files '("~/org"))
+(global-set-key (kbd "C-c a") 'org-agenda)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                   IDE CONFIG
@@ -136,7 +140,7 @@
    (quote
 	("a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" default)))
  '(js2-mode-show-strict-warnings nil)
- '(package-selected-packages (quote (company))))
+'(package-selected-packages (quote (company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

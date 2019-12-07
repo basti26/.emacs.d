@@ -3,6 +3,7 @@ auto-save-list
 *~
 \#*
 recentf
+smex-items
 
 # Compiled
 *.elc
