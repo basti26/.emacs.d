@@ -25,6 +25,7 @@
 					  js2-mode
 					  nodejs-repl
 					  exec-path-from-shell
+					  popwin
 					  ) "Default packages")
 
 (setq package-selected-packages my/packages)
@@ -51,6 +52,8 @@
 ;; hungry delete mode
 (require 'hungry-delete)
 (global-hungry-delete-mode)
+;; auto revert
+(global-auto-revert-mode t)
 ;; config for swiper
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
@@ -96,6 +99,7 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 (global-set-key (kbd "<f12>") 'open-my-init-file)
+
 ;; complete anything
 (global-company-mode t)
 
@@ -106,7 +110,9 @@
 (setq inhibit-splash-screen t)
 (setq-default tab-width 4)
 (setq-default cursor-type 'bar)
+
 (setq make-backup-files nil)
+(setq auto-save-default nil)
 
 ;; enable recentf-mode
 (require 'recentf)
@@ -117,6 +123,10 @@
 ;; hightlight in org file
 (require 'org)
 (setq org-src-fontify-natively t)
+
+;; popwin
+(require 'popwin)
+(popwin-mode t)
 
 ;; delete selection mode
 (delete-selection-mode t)
@@ -130,6 +140,16 @@
 ;; hightlight line
 (global-hl-line-mode t)
 
+;; abbrev mode 
+(abbrev-mode t)
+(define-abbrev-table 'global-abbrev-table '(
+											;; ("8tb" "Tobias")
+											("8ms" "Microsoft")
+											))
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; package
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
