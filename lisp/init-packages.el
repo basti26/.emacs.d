@@ -43,11 +43,9 @@
 (require 'hungry-delete)
 (global-hungry-delete-mode)
 
-
 ;;config for smartparens
-(require 'smartparens-config)
-;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
+(require 'smartparens-config)
 
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
@@ -73,15 +71,6 @@
        '(("\\.js\\'" . js2-mode))
        auto-mode-alist))
 ;; config nodejs-repl
-
-
-
-
-
-
-
-
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
